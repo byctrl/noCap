@@ -15,6 +15,19 @@
     demo.pause();
     demo.controls = true;
   }
+  // Promo video: a big play button over the poster; native controls once it plays.
+  const promo = document.querySelector('[data-promo]');
+  const promoPlay = document.querySelector('[data-promo-play]');
+  if (promo && promoPlay) {
+    promo.controls = false;
+    promoPlay.hidden = false;
+    promoPlay.addEventListener('click', () => {
+      promo.controls = true;
+      promoPlay.hidden = true;
+      promo.play().catch(() => {});
+    });
+    promo.addEventListener('play', () => { promo.controls = true; promoPlay.hidden = true; });
+  }
   if (reduced || !('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('in'));
   } else {
