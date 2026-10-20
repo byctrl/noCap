@@ -101,15 +101,14 @@
       </div>
 
       <div class="wrap shot-wrap">
-        <figure class="window reveal">
-          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>noCap — Flow</span></div>
+        <figure class="window">
+          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>noCap</span></div>
           <div class="window-body">
-            <picture>
-              <source srcset="assets/screens/flow.webp" type="image/webp" />
-              <img src="assets/screens/flow.png" width="2400" height="1500"
-                   alt="noCap flow map: each bar is a row, every syllable is a colored block placed on the beat grid, colored by rhyme group, with flow metrics on the left." />
-            </picture>
-            <div class="playhead" aria-hidden="true"></div>
+            <video class="demo-video" data-demo autoplay muted loop playsinline preload="metadata"
+                   width="1440" height="900" poster="assets/nocap-demo-poster.jpg"
+                   aria-label="noCap demo: opening the demo track, hovering syllables to light up a rhyme group, inspecting a bar, focusing a rhyme, zooming out to the whole verse, the layers menu and the report page.">
+              <source src="assets/nocap-demo.mp4" type="video/mp4" />
+            </video>
           </div>
         </figure>
       </div>

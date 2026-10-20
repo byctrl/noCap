@@ -7,6 +7,14 @@
   // Scroll reveal
   const items = document.querySelectorAll('.reveal');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Hero demo video: no autoplay for people who asked for less motion; let them start it.
+  const demo = document.querySelector('[data-demo]');
+  if (demo && reduced) {
+    demo.removeAttribute('autoplay');
+    demo.pause();
+    demo.controls = true;
+  }
   if (reduced || !('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('in'));
   } else {
