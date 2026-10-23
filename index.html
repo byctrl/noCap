@@ -76,7 +76,7 @@
       <div class="wrap hero-inner">
         <a class="eyebrow" href="https://github.com/fatihserhatturan/noCap/releases/latest" target="_blank" rel="noopener">
           <span class="eyebrow-dot"></span>
-          <span data-version>v0.2.0</span> is out
+          <span data-version>v0.3.0</span> is out
           <span class="eyebrow-sep">·</span> <span class="eyebrow-free">Free &amp; open source</span>
           <span class="eyebrow-arrow" aria-hidden="true">→</span>
         </a>
@@ -230,6 +230,22 @@
             <img src="assets/screens/report.webp" width="2520" height="920" loading="lazy" alt="Report page with metric cards for density, syncopation, pocket, timing quality, delivery and stress on beat, above a chart of density and pocket across the track." />
           </div>
         </article>
+
+        <article class="feature reveal">
+          <div class="feature-copy">
+            <span class="tag tag-pink">Lyrics</span>
+            <h3>Read it, fix it, take it with you.</h3>
+            <p>The Lyrics page shows the whole track as a lyric sheet, one bar per line, with every rhyme in its colour. If a word was misheard, fix it there and the flow map and metrics update with it.</p>
+            <ul class="ticks">
+              <li>Sections and bar numbers; click a line to open it in the flow view</li>
+              <li>Edit line by line, restore the original any time</li>
+              <li>Export as text, synced .lrc or word-timed .lrc</li>
+            </ul>
+          </div>
+          <div class="feature-media">
+            <img src="assets/screens/lyrics.webp" width="1680" height="1000" loading="lazy" alt="Lyrics page for the demo verse: eight bars in two verses with rhyming words coloured, and the Export menu open with text, synced lyrics, word-timed lyrics and copy options." />
+          </div>
+        </article>
       </div>
     </section>
 
@@ -263,7 +279,7 @@
             </span>
             <span class="pipe-n">03</span>
             <h3>Transcribe every word</h3>
-            <p>Whisper produces word-level timestamps, refined to roughly 10 ms accuracy.</p>
+            <p>Whisper produces word-level timestamps; filters drop invented words and a second pass listens again to anything it skipped.</p>
           </li>
           <li>
             <span class="pipe-icon" aria-hidden="true">
@@ -274,6 +290,7 @@
             <p>Words are split into syllables with stress from the CMU dictionary and placed on the beat grid.</p>
           </li>
         </ol>
+        <p class="section-sub pipe-note reveal">While it works, noCap shows each step in plain words, how long is left and what it has found so far, and you can cancel at any point.</p>
       </div>
     </section>
 
@@ -363,7 +380,11 @@ npm run desktop:dev</code></pre>
           </details>
           <details>
             <summary>How long does an analysis take?</summary>
-            <p>It depends on track length and your machine; separation and transcription are the heavy steps. Once analyzed, a track reopens instantly from your library.</p>
+            <p>A few minutes for a typical song on an Apple Silicon Mac; separating the vocals and listening to the lyrics are the heavy steps. Progress and time left are shown live, and you can cancel at any point. Once analyzed, a track reopens instantly from your library.</p>
+          </details>
+          <details>
+            <summary>What if a word is transcribed wrong?</summary>
+            <p>Open the Lyrics page and fix it. noCap re-places the corrected words on the beat grid, so the flow map, rhymes and metrics update too, and you can restore the original at any time.</p>
           </details>
         </div>
       </div>

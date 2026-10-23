@@ -287,6 +287,7 @@ section { position: relative; }
   list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
   counter-reset: none; position: relative;
 }
+.pipe-note { max-width: 640px; margin: 32px auto 0; text-align: center; font-size: 1rem; }
 .pipeline::before {
   content: ''; position: absolute; left: 12%; right: 12%; top: 46px; height: 1px;
   background: linear-gradient(90deg, transparent, var(--border-strong) 15%, var(--border-strong) 85%, transparent);
