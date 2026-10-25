@@ -4,6 +4,14 @@
   const root = document.documentElement;
   root.classList.add('js');
 
+  // Links to a FAQ entry open it, not just scroll to it.
+  const openFaq = () => {
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target instanceof HTMLDetailsElement) target.open = true;
+  };
+  window.addEventListener('hashchange', openFaq);
+  openFaq();
+
   // Scroll reveal
   const items = document.querySelectorAll('.reveal');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

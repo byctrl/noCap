@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>noCap — See how a rapper rides the beat</title>
-  <meta name="description" content="noCap is a free, open-source flow analyzer for hip-hop. It maps every syllable to the beat grid and measures density, syncopation, pocket and rhyme chains — 100% on your Mac." />
+  <meta name="description" content="noCap is a free, open-source flow analyzer for hip-hop. It maps every syllable to the beat grid and measures density, syncopation, pocket and rhyme chains — 100% on your computer, on macOS and Windows." />
   <link rel="canonical" href="https://fatihserhatturan.github.io/noCap/" />
   <meta name="theme-color" content="#0a0a0b" />
   <link rel="icon" href="assets/logo.png" />
@@ -29,7 +29,7 @@
     "@type": "SoftwareApplication",
     "name": "noCap",
     "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "macOS",
+    "operatingSystem": "macOS, Windows",
     "description": "Open-source hip-hop flow and rhythm analyzer that maps every syllable to the beat grid.",
     "url": "https://fatihserhatturan.github.io/noCap/",
     "downloadUrl": "https://github.com/fatihserhatturan/noCap/releases/latest",
@@ -91,13 +91,17 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.06-.52 2.69-1.28z"/></svg>
             Download for macOS
           </a>
+          <a class="btn btn-ghost" data-download-win href="https://github.com/fatihserhatturan/noCap/releases/latest" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.5v7H3zM11.5 4.35 21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.35z"/></svg>
+            Download for Windows
+          </a>
           <a class="btn btn-ghost" href="https://github.com/fatihserhatturan/noCap" target="_blank" rel="noopener">
             View on GitHub
           </a>
         </div>
         <p class="hero-note">
-          Apple Silicon<span data-size></span> · Everything bundled · No account, no upload
-          <br /><a href="#faq-intel">On an Intel Mac?</a>
+          Apple Silicon Macs<span data-size></span> · Windows 10 and 11 (64&#8209;bit) · Everything bundled · No account, no upload
+          <br /><a href="#faq-windows">Installing on Windows</a> · <a href="#faq-intel">On an Intel Mac?</a>
         </p>
       </div>
 
@@ -131,7 +135,7 @@
       <div class="wrap"><div class="stats">
         <div class="stat"><b>~10 ms</b><span>word-level timing</span></div>
         <div class="stat"><b>8</b><span>flow metrics per track</span></div>
-        <div class="stat"><b>100%</b><span>local — audio never leaves your Mac</span></div>
+        <div class="stat"><b>100%</b><span>local — audio never leaves your computer</span></div>
         <div class="stat"><b>MIT</b><span>licensed, free forever</span></div>
       </div></div>
     </section>
@@ -360,11 +364,15 @@ npm run desktop:dev</code></pre>
           </details>
           <details>
             <summary>Does my audio get uploaded anywhere?</summary>
-            <p>No. Beat detection, vocal separation and transcription all run on your Mac. Tracks and analyses are stored locally in your library.</p>
+            <p>No. Beat detection, vocal separation and transcription all run on your computer. Tracks and analyses are stored locally in your library.</p>
           </details>
           <details id="faq-intel">
-            <summary>Which Macs are supported? What about Windows or Linux?</summary>
-            <p>The current release is a self-contained build for Apple Silicon Macs. On Intel Macs, Windows or Linux you can run noCap from source today — see the <a href="#developers">developer setup</a>. Prebuilt packages for more platforms are welcome as contributions.</p>
+            <summary>Which computers are supported?</summary>
+            <p>There are self-contained builds for Apple Silicon Macs (M1 or later) and for 64-bit Windows 10 and 11. On Windows, an NVIDIA graphics card speeds up analysis; without one it runs on the processor, just slower. On Intel Macs or Linux you can run noCap from source today — see the <a href="#developers">developer setup</a>. Prebuilt packages for more platforms are welcome as contributions.</p>
+          </details>
+          <details id="faq-windows">
+            <summary>How do I install it on Windows?</summary>
+            <p>The Windows download comes in two parts because of GitHub's file size limit. Download both <code>.7z.001</code> and <code>.7z.002</code> from the <a href="https://github.com/fatihserhatturan/noCap/releases/latest" target="_blank" rel="noopener">latest release</a> into the same folder, open the <code>.001</code> file with <a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-Zip</a> and extract it, then run <code>noCap.exe</code>. The Windows build isn't code-signed yet, so SmartScreen may warn you the first time: choose <strong>More info</strong> → <strong>Run anyway</strong>.</p>
           </details>
           <details>
             <summary>Why is the download so large?</summary>
@@ -395,9 +403,10 @@ npm run desktop:dev</code></pre>
       <div class="wrap"><div class="final-inner reveal">
         <img src="assets/logo.png" alt="" width="64" height="64" />
         <h2>Stop guessing. See the flow.</h2>
-        <p>Free, open source, and running entirely on your Mac.</p>
+        <p>Free, open source, and running entirely on your computer.</p>
         <div class="cta-row">
           <a class="btn btn-light" data-download href="https://github.com/fatihserhatturan/noCap/releases/latest" target="_blank" rel="noopener">Download for macOS</a>
+          <a class="btn btn-ghost-light" href="https://github.com/fatihserhatturan/noCap/releases/latest" target="_blank" rel="noopener">Download for Windows</a>
           <a class="btn btn-ghost-light" href="https://github.com/fatihserhatturan/noCap" target="_blank" rel="noopener">Star on GitHub</a>
         </div>
       </div></div>
