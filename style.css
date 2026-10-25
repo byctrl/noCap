@@ -358,9 +358,7 @@ section { position: relative; }
 .final { padding: 120px 0; }
 .final-inner {
   text-align: center; padding: 72px 24px; border-radius: 24px; position: relative; overflow: hidden;
-  background:
-    radial-gradient(80% 120% at 50% 0%, rgba(255,255,255,.18), transparent 60%),
-    linear-gradient(135deg, #ff3d00 0%, #ff1f6b 55%, #b02bd8 100%);
+  background: transparent;
 }
 .final-inner img { margin: 0 auto 24px; width: 72px; height: 72px; padding: 10px; border-radius: 20px; background: #0a0a0b; box-shadow: 0 12px 32px rgba(0,0,0,.35); }
 .final-inner p { color: rgba(255,255,255,.85); margin: 14px 0 32px; font-size: 1.1rem; }
