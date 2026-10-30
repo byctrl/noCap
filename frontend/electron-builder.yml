@@ -73,3 +73,10 @@ win:
 nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true
+
+linux:
+  icon: build/icon.png
+  category: AudioVideo
+  target:
+    - target: AppImage
+      arch: [x64]
